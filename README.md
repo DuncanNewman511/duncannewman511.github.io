@@ -1,1 +1,3 @@
-# duncannewman511.github.io
+# Duncan Newman
+
+Hello, my name is Duncan Newman
