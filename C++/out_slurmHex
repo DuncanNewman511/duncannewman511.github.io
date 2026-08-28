@@ -1,0 +1,75 @@
+Usage: cd [-plvn][-|<dir>].
+This machine is e3-w6420b-05
+My jobid is 4734076
+Thu Sep 25 03:57:08 PM EDT 2025
+./slurmHex.c: In function ‘main’:
+./slurmHex.c:16:1: warning: implicit declaration of function ‘sleep’ [-Wimplicit-function-declaration]
+   16 | sleep(5);
+      | ^~~~~
+Starting jobs...
+Timestamp: Thu Sep 25 03:57:14 PM EDT 2025
+Task 1 of 2 running on e3-w6420b-05
+Task 0 of 2 running on e3-w6420b-05
+Task 3 of 4 running on e3-w6420b-06
+Task 2 of 4 running on e3-w6420b-05
+Task 1 of 4 running on e3-w6420b-05
+Task 0 of 4 running on e3-w6420b-05
+Task 6 of 8 running on e3-w6420b-06
+Task 5 of 8 running on e3-w6420b-05
+Task 4 of 8 running on e3-w6420b-05
+Task 2 of 8 running on e3-w6420b-05
+Task 3 of 8 running on e3-w6420b-05
+Task 0 of 8 running on e3-w6420b-05
+Task 1 of 8 running on e3-w6420b-05
+Task 7 of 8 running on e3-w6420b-07
+Task 5 of 15 running on e3-w6420b-05
+Task 1 of 15 running on e3-w6420b-05
+Task 3 of 15 running on e3-w6420b-05
+Task 6 of 15 running on e3-w6420b-05
+Task 7 of 15 running on e3-w6420b-05
+Task 4 of 15 running on e3-w6420b-05
+Task 0 of 15 running on e3-w6420b-05
+Task 2 of 15 running on e3-w6420b-05
+Task 14 of 15 running on e3-w6420b-07
+Task 13 of 15 running on e3-w6420b-07
+Task 12 of 15 running on e3-w6420b-07
+Task 11 of 15 running on e3-w6420b-06
+Task 8 of 15 running on e3-w6420b-06
+Task 10 of 15 running on e3-w6420b-06
+Task 9 of 15 running on e3-w6420b-06
+===========================================
+JOB STEP INFO:
+         STEPID     NAME PARTITION     USER      TIME NODELIST
+  4734076.batch    batch      main dnewm005      4:47 e3-w6420b-05
+ 4734076.extern   extern      main dnewm005      4:47 e3-w6420b-[05-07]
+JobId=4734076 JobName=HW1
+   UserId=dnewm005(623419) GroupId=users(14514) MCS_label=N/A
+   Priority=37211 Nice=0 Account=odu QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:04:47 TimeLimit=02:00:00 TimeMin=N/A
+   SubmitTime=2025-09-25T15:57:07 EligibleTime=2025-09-25T15:57:07
+   AccrueTime=2025-09-25T15:57:07
+   StartTime=2025-09-25T15:57:08 EndTime=2025-09-25T17:57:08 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2025-09-25T15:57:08 Scheduler=Main
+   Partition=main AllocNode:Sid=wahab-01:2240119
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=e3-w6420b-[05-07]
+   BatchHost=e3-w6420b-05
+   NumNodes=3 NumCPUs=15 NumTasks=15 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=15,mem=1050000M,node=3,billing=15
+   AllocTRES=cpu=15,node=3,billing=15
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=0 MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/home/dnewm005/slurmHex_script_template
+   WorkDir=/home/dnewm005
+   StdErr=/home/dnewm005/out_slurmHex
+   StdIn=/dev/null
+   StdOut=/home/dnewm005/out_slurmHex
+   
+
+===========================================
+Done
+Timestamp: Thu Sep 25 04:01:55 PM EDT 2025

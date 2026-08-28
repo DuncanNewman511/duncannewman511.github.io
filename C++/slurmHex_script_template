@@ -1,0 +1,39 @@
+#!/bin/tcsh
+##### Section 1. These lines are for slurm header 
+#SBATCH -t 2:00:00
+#SBATCH -o out_slurmHex
+#SBATCH -J HW1
+#SBATCH --nodes=3
+#SBATCH --ntasks=15
+
+##### Section 2: These are shell commands
+cd ~/
+echo -n 'This machine is '; hostname
+echo -n 'My jobid is '; echo $SLURM_JOBID
+date
+module load container_env intel
+crun.intel mpicc ./slurmHex.c -o slurmHex.ex
+
+echo 'Starting jobs...'
+echo -n 'Timestamp: ';date
+
+##### Section 3: These are running the slurmHex program in parallel
+srun -N1 -n2 crun.intel ./slurmHex.ex
+srun -N2 -n4 crun.intel ./slurmHex.ex
+srun -N3 -n8 crun.intel ./slurmHex.ex
+srun -N3 -n15 --ntasks-per-node=5 crun.intel ./slurmHex.ex
+
+##### Give jobs a couple seconds to start, then query them
+sleep 3
+echo '==========================================='
+echo 'JOB STEP INFO:'
+squeue -s -j $SLURM_JOBID
+scontrol show j $SLURM_JOBID
+echo '==========================================='
+
+##### Don't forget to wait!
+wait
+
+echo 'Done'
+echo -n 'Timestamp: ';date
+
